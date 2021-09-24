@@ -317,19 +317,20 @@ export class ModalProfileAdd extends React.Component<ModalProfileAddProps, Modal
                         
                         {this.state.advanced ?
                             <div className='ModalProfileAdd-advanced'>
-                                <InputText
-                                    label='Region'
-                                    name='region'
-                                    error={this.state.formErrors.region}
-                                    value={this.state.form.region}
-                                    onChange={this._onInputChange}
-                                />
 
                                 <InputText
                                     label='Endpoint'
                                     name='endpoint'
                                     error={this.state.formErrors.endpoint}
                                     value={this.state.form.endpoint}
+                                    onChange={this._onInputChange}
+                                />
+                                
+                                <InputText
+                                    label='Region'
+                                    name='region'
+                                    error={this.state.formErrors.region}
+                                    value={this.state.form.region}
                                     onChange={this._onInputChange}
                                 />
 
