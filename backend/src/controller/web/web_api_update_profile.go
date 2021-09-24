@@ -27,13 +27,26 @@ import (
 	"github.com/indece-official/s3-explorer/backend/src/model"
 )
 
-func v1UpdateProfileJSONRequestBodyToProfileV1(profileID int64, requestBody *webapi.V1UpdateProfileJSONRequestBody) *model.ProfileV1 {
+func v1UpdateProfileJSONRequestBodyToProfileV1(c *Controller, profileID int64, requestBody *webapi.V1UpdateProfileJSONRequestBody) *model.ProfileV1 {
 	profile := &model.ProfileV1{}
 
 	profile.ID = profileID
 	profile.Name = requestBody.Name
 	profile.AccessKey = requestBody.AccessKey
+
 	profile.SecretKey = requestBody.SecretKey
+
+	// replace with the secret key in unchanged
+
+	if requestBody.SecretKey == "***" {
+		secretProfile, err := c.settingsService.GetProfile(profileID)
+		if err != nil {
+			c.log.Errorf("Can’t retrieve profile : %s", err)
+		} else {
+			profile.SecretKey = secretProfile.SecretKey
+		}
+	}
+
 	profile.Region = requestBody.Region
 	profile.Endpoint = requestBody.Endpoint
 	profile.SSL = requestBody.Ssl
@@ -71,7 +84,7 @@ func (c *Controller) reqAPIV1UpdateProfile(w http.ResponseWriter, r *http.Reques
 		return
 	}
 
-	profile := v1UpdateProfileJSONRequestBodyToProfileV1(profileID, requestBody)
+	profile := v1UpdateProfileJSONRequestBodyToProfileV1(c, profileID, requestBody)
 
 	err = c.settingsService.UpdateProfile(profile)
 	if err != nil {
