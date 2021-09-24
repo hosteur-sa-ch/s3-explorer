@@ -16,7 +16,7 @@
 }
 
 .BucketList-header {
-    background: #D7B36A;
+    background: #01579B;
     color: #fff;
     font-weight: normal;
     padding: 5px 10px;
@@ -63,7 +63,8 @@
 }
 
 .BucketList-bucket-selected {
-    background-color: #FFE3A9;
+    background-color: #0277BD;
+    color: #fff;
 }
 
 .BucketList-bucket-name {
@@ -91,7 +92,7 @@
 }
 
 .BucketList-currbucket-header {
-    background: #D7B36A;
+    background: #01579B;
     color: #fff;
     font-weight: normal;
     padding: 5px 10px;

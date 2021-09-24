@@ -17,7 +17,6 @@
 }
 
 .ModalProfileSelect-profile-actions {
-    display: none;
     position: absolute;
     right: 0;
     top: 0;
@@ -31,7 +30,3 @@
     cursor: pointer;
 }
 
-
-.ModalProfileSelect-profile:hover .ModalProfileSelect-profile-actions {
-    display: block;
-}
