@@ -15,6 +15,9 @@ https://indece.com/software/s3-explorer
 * go >= 1.14
 * docker
 * github.com/google/go-licenses
+* [oapi-codegen](https://github.com/deepmap/oapi-codegen)
+* libgtk-3-dev
+* libwebkit2gtk-4.0-dev
 
 ### Linting
 `> make lint --always-make`
