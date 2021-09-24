@@ -43,12 +43,14 @@ func (p *ProfileV1) ToAwsOptions() session.Options {
 
 	if p.Endpoint != "" {
 		config.Endpoint = aws.String(p.Endpoint)
+	} else {
+		config.Endpoint = aws.String("s3.hosteur.io")
 	}
 
 	if p.Region != "" {
 		config.Region = aws.String(p.Region)
 	} else {
-		config.Region = aws.String("us-west-2")
+		config.Region = aws.String("defaultRegion")
 	}
 
 	config.DisableSSL = aws.Bool(!p.SSL)
