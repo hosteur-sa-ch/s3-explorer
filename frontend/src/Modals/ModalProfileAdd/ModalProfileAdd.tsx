@@ -298,14 +298,6 @@ export class ModalProfileAdd extends React.Component<ModalProfileAddProps, Modal
                             onChange={this._onInputChange}
                         />
 
-                        <InputText
-                            label='Region'
-                            name='region'
-                            error={this.state.formErrors.region}
-                            value={this.state.form.region}
-                            onChange={this._onInputChange}
-                        />
-
                         <div
                             className='ModalProfileAdd-advanced-toggle'
                             onClick={this._toggleAdvanced}>
@@ -325,6 +317,14 @@ export class ModalProfileAdd extends React.Component<ModalProfileAddProps, Modal
                         
                         {this.state.advanced ?
                             <div className='ModalProfileAdd-advanced'>
+                                <InputText
+                                    label='Region'
+                                    name='region'
+                                    error={this.state.formErrors.region}
+                                    value={this.state.form.region}
+                                    onChange={this._onInputChange}
+                                />
+
                                 <InputText
                                     label='Endpoint'
                                     name='endpoint'
