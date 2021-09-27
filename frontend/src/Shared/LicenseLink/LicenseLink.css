@@ -1,9 +1,9 @@
 .LicenseLink {
     text-decoration: underline;
     cursor: pointer;
-    color: #0F4E51;
+    color: #0D47A1;
 }
 
 .LicenseLink:hover {
-    color: #407F82;
+    color: #1976D2;
 }

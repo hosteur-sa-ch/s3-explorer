@@ -6,7 +6,7 @@ button {
     color: #fff;
     text-align: center;
     cursor: pointer;
-    background: #0F4E51;
+    background: #01579B;
     border: none;
     border-radius: 2px;
     padding: 5px 10px;
@@ -15,7 +15,7 @@ button {
 }
 
 button:not(.disabled):hover {
-    color: #D7B36A;
+    background-color: #0277BD;
 }
 
 button.disabled {

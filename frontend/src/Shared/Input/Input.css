@@ -32,7 +32,7 @@
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 1px solid #0F4E51;
+    border-bottom: 1px solid #000;
     outline: none;
 }
 
@@ -44,14 +44,14 @@
 .Input-input.invalid select,
 .Input-input input:invalid,
 .Input-input select:invalid {
-    border: 1px solid #861B18;
+    border: 1px solid #D32F2F;
 }
 
 .Input-checkbox-label.invalid input {
-    outline: 1px solid #861B18;
+    outline: 1px solid #D32F2F;
 }
 
 .Input-error {
-    color: #861B18;
+    color: #D32F2F;
     font-size: 12px;
 }
