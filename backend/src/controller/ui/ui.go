@@ -21,7 +21,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/zserge/webview"
+	"github.com/webview/webview"
 
 	"github.com/indece-official/go-gousu"
 	"github.com/indece-official/s3-explorer/backend/src/controller/web"
