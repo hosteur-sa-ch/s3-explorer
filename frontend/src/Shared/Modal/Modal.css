@@ -28,8 +28,8 @@
 
 .Modal-header {
     padding: 5px 10px;
-    background: #0F4E51;
-    color: #fff;
+    background: #080099;
+    color: rgb(255, 255, 255);
     margin-bottom: 5px;
     display: flex;
     flex-direction: row;

@@ -48,8 +48,8 @@
 }
 
 .App-error {
-    color: #fff;
-    background: #861B18;
+    color: rgb(255, 0, 0);
+    background: #000;
     padding: 5px 10px;
     flex-grow: 0;
     flex-shrink: 0;

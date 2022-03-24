@@ -1,21 +1,18 @@
 button {
-    display: inline-block;
-    max-width: 100%;
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    cursor: pointer;
-    background: #0F4E51;
-    border: none;
-    border-radius: 2px;
-    padding: 5px 10px;
-    outline: 0;
-    min-width: 80px;
+    background-color:#00ffff;
+	border-radius:42px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:6px 76px;
+	text-decoration:none;
 }
 
 button:not(.disabled):hover {
-    color: #D7B36A;
+    color: #00e6e6;
 }
 
 button.disabled {
