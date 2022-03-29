@@ -16,14 +16,14 @@
 }
 
 .BucketList-header {
-    background: #63a7dc;
-    color: #fff;
-    font-weight: normal;
+    background: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
     padding: 5px 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 28px;
+    height: auto;
     box-sizing: border-box;
 }
 
@@ -92,9 +92,9 @@
 }
 
 .BucketList-currbucket-header {
-    background: #01579B;
+    background: #00ccff;
     color: #fff;
-    font-weight: normal;
+    font-weight: bold;
     padding: 5px 10px;
     display: flex;
     flex-direction: row;

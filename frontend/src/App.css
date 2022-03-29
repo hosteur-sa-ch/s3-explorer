@@ -49,7 +49,7 @@
 
 .App-error {
     color: rgb(255, 0, 0);
-    background: #000;
+    background: rgb(0, 112, 192);
     padding: 5px 10px;
     flex-grow: 0;
     flex-shrink: 0;

@@ -11,11 +11,11 @@
     bottom: 0;
     width: 0;
     transition: width ease 0.3s;
-    background: #D7B36A;
+    background: #00e1ff;
 }
 
 .ProgressBar-label {
-    color: #888;
+    color: rgb(255, 255, 255);
     position: absolute;
     left: 0;
     right: 0;
@@ -24,4 +24,5 @@
     font-size: 14px;
     padding: 3px 10px;
     text-align: center;
+    font-weight: bold;
 }
