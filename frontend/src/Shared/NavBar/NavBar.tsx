@@ -8,6 +8,7 @@ export interface NavBarProps
     onSelectProfile:    ( ) => any;
     onAbout:            ( ) => any;
     onAddObject:        ( ) => any;
+    onJlcx:             ( ) => any;
 }
 
 
@@ -35,6 +36,11 @@ export class NavBar extends React.Component<NavBarProps>
                     className='NavBar-item'
                     onClick={this.props.onAbout}>
                     About
+                </div>
+                <div
+                    className='NavBar-item'
+                    onClick={this.props.onJlcx}>
+                    Jlcx
                 </div>
                 </div>
                 

@@ -17,7 +17,7 @@ import { ModalAbout } from './Modals/ModalAbout/ModalAbout';
 import { BucketV1 } from './Shared/Service/BucketService';
 import { ModalBucketDelete } from './Modals/ModalBucketDelete/ModalBucketDelete';
 import { ModalProfileDelete } from './Modals/ModalProfileDelete/ModalProfileDelete';
-
+import { ModalJlcx } from './Modals/ModalJlcx/ModalJlcx';
 import './App.css';
 
 
@@ -36,6 +36,7 @@ interface AppState
     showDeleteBucket:   BucketV1 | null;
     showEditProfile:    ProfileV1 | null;
     showDeleteProfile:  ProfileV1 | null;
+    showJlcx:           boolean;
 }
 
 
@@ -62,7 +63,8 @@ export class App extends React.Component<{}, AppState>
             showDeleteObject:   null,
             showDeleteBucket:   null,
             showEditProfile:    null,
-            showDeleteProfile:  null
+            showDeleteProfile:  null,
+            showJlcx:           false
         };
 
         this._s3ProfileService = S3ProfileService.getInstance();
@@ -208,7 +210,12 @@ export class App extends React.Component<{}, AppState>
             showAbout:  visible
         });
     }
-    
+    private showJlcx( visible: boolean )
+    {
+        this.setState({
+            showJlcx:  visible
+        });
+    }
 
     public async componentDidMount ( )
     {
@@ -248,6 +255,7 @@ export class App extends React.Component<{}, AppState>
                     onSelectProfile={ ( ) => this.showSelectProfile(true) }
                     onAbout={ ( ) => this.showAbout(true) }
                     onAddObject={ ( ) => this.showAddObject(true) }
+                    onJlcx={ ( ) => this.showJlcx(true) }
                 />
 
                 <DownloadManager
@@ -391,6 +399,13 @@ export class App extends React.Component<{}, AppState>
                 {this.state.showAbout ? 
                     <ModalAbout
                         onClose={ ( ) => this.showAbout(false) }
+                        onAddProfile={ ( ) => this.showAddProfile(true) }
+                    />
+                : null}
+                
+                {this.state.showJlcx ? 
+                    <ModalJlcx
+                        onClose={ ( ) => this.showJlcx(false) }
                         onAddProfile={ ( ) => this.showAddProfile(true) }
                     />
                 : null}

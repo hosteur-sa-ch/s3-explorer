@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Modal } from '../../Shared/Modal/Modal';
 import { Link } from '../../Shared/Link/Link';
-import { Button } from '../../Shared/Button/Button';
 import './ModalAbout.css';
 import { LicenseLink } from '../../Shared/LicenseLink/LicenseLink';
 export interface ModalAboutProps
@@ -32,11 +31,6 @@ export class ModalAbout extends React.Component<ModalAboutProps>
                     <br />
                     <LicenseLink />
                 </div>
-                <Button
-                    onClick={this.props.onAddProfile}
-                    type='submit'>
-                     Save
-                     </Button>
             </Modal>
             
         );
