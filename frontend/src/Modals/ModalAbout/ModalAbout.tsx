@@ -1,16 +1,15 @@
 import * as React from 'react';
 import { Modal } from '../../Shared/Modal/Modal';
 import { Link } from '../../Shared/Link/Link';
-
+import { Button } from '../../Shared/Button/Button';
 import './ModalAbout.css';
 import { LicenseLink } from '../../Shared/LicenseLink/LicenseLink';
-
-
 export interface ModalAboutProps
+
 {
     onClose:    ( ) => any;
+    onAddProfile:       ( ) => any;
 }
-
 
 export class ModalAbout extends React.Component<ModalAboutProps>
 {
@@ -24,7 +23,6 @@ export class ModalAbout extends React.Component<ModalAboutProps>
                 <div className='ModalAbout-title'>
                     S3 Explorer v{(window as any).VERSION || '???'}
                 </div>
-
                 <div className='ModalAbout-text'>
                     Copyright 2021 &copy; indece UG (haftungsbeschränkt)<br />
                     <br />
@@ -34,7 +32,13 @@ export class ModalAbout extends React.Component<ModalAboutProps>
                     <br />
                     <LicenseLink />
                 </div>
+                <Button
+                    onClick={this.props.onAddProfile}
+                    type='submit'>
+                     Save
+                     </Button>
             </Modal>
+            
         );
     }
 }

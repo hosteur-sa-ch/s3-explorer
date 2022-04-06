@@ -391,6 +391,7 @@ export class App extends React.Component<{}, AppState>
                 {this.state.showAbout ? 
                     <ModalAbout
                         onClose={ ( ) => this.showAbout(false) }
+                        onAddProfile={ ( ) => this.showAddProfile(true) }
                     />
                 : null}
             </div>
